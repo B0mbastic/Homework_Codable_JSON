@@ -20,14 +20,10 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         return Table
     }()
     
-    var methodName: String = ""
-    
     let identifier = "cellID"
     private var selectedId: Int = -1
     private var characters: [CartoonCharacter] = []
     private let networkLayer: NetworkLayer = UrlSessionNetworkLayer()
-    
-    
     private func setupViews() {
         view.backgroundColor = .white
         view.addSubview(charactersTable)
@@ -37,7 +33,6 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-60)
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

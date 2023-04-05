@@ -13,17 +13,9 @@ class TableCell: UITableViewCell {
         let label = UILabel()
         return label
     }()
-    //   var characterImage = UIImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        //        addSubview(characterImage)
-        //
-        //        characterImage.frame = CGRect(x: 10, y: 10, width: 60, height: 60)
-        //        characterImage.layer.borderWidth = 1
-        //        characterImage.contentMode = .scaleAspectFill
-        //        characterImage.clipsToBounds = true
-        
         addSubview(itemNameLabel)
         itemNameLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(40)
@@ -36,19 +28,3 @@ class TableCell: UITableViewCell {
         super.init(coder: coder)
     }
 }
-
-//extension UIImageView {
-//    func loadFrom(URLAddress: String) {
-//        guard let url = URL(string: URLAddress) else {
-//            return
-//        }
-//        
-//        DispatchQueue.main.async { [weak self] in
-//            if let imageData = try? Data(contentsOf: url) {
-//                if let loadedImage = UIImage(data: imageData) {
-//                        self?.image = loadedImage
-//                }
-//            }
-//        }
-//    }
-//}

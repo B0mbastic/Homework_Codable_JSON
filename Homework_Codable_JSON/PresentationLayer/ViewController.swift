@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import SnapKit
+import SnapKit
 
 class ViewController: UIViewController {
     
@@ -56,7 +56,6 @@ class ViewController: UIViewController {
         mainLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(100)
-            //make.leading.trailing.equalToSuperview().inset(40)
         }
         view.addSubview(loadCharactersButton)
         loadCharactersButton.snp.makeConstraints { make in

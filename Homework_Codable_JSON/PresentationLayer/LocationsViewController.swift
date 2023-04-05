@@ -20,14 +20,10 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
         return Table
     }()
     
-    var methodName: String = ""
-    
     let identifier = "cellID"
     private var selectedId: Int = -1
     private var locations: [CartoonLocation] = []
     private let networkLayer: NetworkLayer = UrlSessionNetworkLayer()
-    
-    
     private func setupViews() {
         view.backgroundColor = .white
         view.addSubview(locationsTable)
@@ -37,7 +33,6 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-60)
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +65,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
                    section: Int) -> String? {
         return "Locations of Rick nad Morty:"
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let locationController = LocationViewController()
         locationController.locationName = locations[indexPath.row].name

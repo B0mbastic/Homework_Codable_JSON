@@ -52,7 +52,7 @@ class LocationViewController: UIViewController {
             make.top.equalTo(locationTypeLabel.snp.bottom).offset(40)
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
