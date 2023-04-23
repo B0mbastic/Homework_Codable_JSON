@@ -109,19 +109,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
     }
-
-    @objc func showCharacters(sender: UIButton!){
-        let charactersController = CharactersViewController()
-        navigationController?.pushViewController(charactersController, animated: true)
-    }
-    @objc func showLocations(sender: UIButton!){
-//        let locationsController = LocationsViewController()
-//        navigationController?.pushViewController(locationsController, animated: true)
-    }
-    @objc func showEpisodes(sender: UIButton!){
-        let episodesController = EpisodesViewController()
-        navigationController?.pushViewController(episodesController, animated: true)
-    }
     
     @objc func showDataViewController(sender: UIButton!){
         let dataViewController = fabric.buildViewController(

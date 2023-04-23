@@ -17,10 +17,8 @@ struct DataViewControllerFabric: DataViewControllerFabricMethod {
         switch dataViewControllerType {
         case .characters:
             return CharactersViewController()
-//        case .characters:
-//            return CharactersViewController()
         case .locations:
-            return LocationsViewController() //LocationsViewController()
+            return LocationsViewController()
         case .episodes:
             return EpisodesViewController()
         }

@@ -39,10 +39,8 @@ final class CharactersViewController: UIViewController, UITableViewDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupViews()
         getData()
-        
     }
     
     func getData() {
@@ -162,7 +160,6 @@ final class LocationsViewController: UIViewController, UITableViewDelegate, UITa
     private func processError(error: NetworkError) {
         print(error)
     }
-    
 }
 
 final class EpisodesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DataViewController {
@@ -237,6 +234,5 @@ final class EpisodesViewController: UIViewController, UITableViewDelegate, UITab
     private func processError(error: NetworkError) {
         print(error)
     }
-    
 }
 
