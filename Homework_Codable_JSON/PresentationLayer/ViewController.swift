@@ -10,6 +10,10 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController {
+    private let dataViewControllers = [DataViewControllerType.characters, DataViewControllerType.locations, DataViewControllerType.episodes]
+
+    private let fabric: DataViewControllerFabricMethod = DataViewControllerFabric()
+    private var dataViewController: DataViewController?
     
     private lazy var mainLabel: UILabel = {
         let label = UILabel()
@@ -17,36 +21,55 @@ class ViewController: UIViewController {
         label.text = "Rick and Morty"
         return label
     }()
-    private lazy var loadCharactersButton: UIButton = {
+    private lazy var showDataButton: UIButton = {
         let button = UIButton()
+        button.tag = 1
         button.backgroundColor = .darkGray
         button.layer.cornerRadius = 15
         button.layer.zPosition = 5
         button.setTitle("Load characters", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(showCharacters), for: .touchUpInside)
+        //button.addTarget(self, action: #selector(showCharacters), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showDataViewController), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var loadCharactersButton: UIButton = {
+        let button = UIButton()
+        button.tag = 0
+        button.backgroundColor = .darkGray
+        button.layer.cornerRadius = 15
+        button.layer.zPosition = 5
+        button.setTitle("Load characters", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        //button.addTarget(self, action: #selector(showCharacters), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showDataViewController), for: .touchUpInside)
         return button
     }()
     
     private lazy var loadLocationsButton: UIButton = {
         let button = UIButton()
+        button.tag = 1
         button.backgroundColor = .darkGray
         button.layer.cornerRadius = 15
         button.layer.zPosition = 5
         button.setTitle("Load locations", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(showLocations), for: .touchUpInside)
+        //button.addTarget(self, action: #selector(showLocations), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showDataViewController), for: .touchUpInside)
         return button
     }()
     
     private lazy var loadEpisodesButton: UIButton = {
         let button = UIButton()
+        button.tag = 2
         button.backgroundColor = .darkGray
         button.layer.cornerRadius = 15
         button.layer.zPosition = 5
         button.setTitle("Load episodes", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(showEpisodes), for: .touchUpInside)
+        //button.addTarget(self, action: #selector(showEpisodes), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showDataViewController), for: .touchUpInside)
         return button
     }()
     
@@ -92,12 +115,20 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(charactersController, animated: true)
     }
     @objc func showLocations(sender: UIButton!){
-        let locationsController = LocationsViewController()
-        navigationController?.pushViewController(locationsController, animated: true)
+//        let locationsController = LocationsViewController()
+//        navigationController?.pushViewController(locationsController, animated: true)
     }
     @objc func showEpisodes(sender: UIButton!){
         let episodesController = EpisodesViewController()
         navigationController?.pushViewController(episodesController, animated: true)
+    }
+    
+    @objc func showDataViewController(sender: UIButton!){
+        let dataViewController = fabric.buildViewController(
+            dataViewControllerType: dataViewControllers[sender.tag]
+        )
+        navigationController?.pushViewController(dataViewController!, animated: true)
+
     }
 }
 

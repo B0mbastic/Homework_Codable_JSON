@@ -13,6 +13,16 @@ class TableCell: UITableViewCell {
         let label = UILabel()
         return label
     }()
+    lazy var characterPhoto: UIImageView = {
+        let image = UIImageView()
+        addSubview(image)
+        image.frame = CGRect(x: 10, y: 10, width: 60, height: 60)
+        image.layer.borderWidth = 1
+        image.contentMode = .scaleAspectFill
+        image.layer.cornerRadius = 30
+        image.clipsToBounds = true
+        return image
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

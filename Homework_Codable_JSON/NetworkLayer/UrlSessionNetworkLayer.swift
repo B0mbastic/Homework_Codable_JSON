@@ -34,11 +34,42 @@ struct UrlSessionNetworkLayer: NetworkLayer {
                     id: character.id,
                     name: character.name,
                     status: character.status.rawValue,
-                    gender: character.gender.rawValue)
+                    gender: character.gender.rawValue,
+                    url: character.url)
             }
             callback(.success(mapped))
         }.resume()
     }
+    
+//    func getImage(url: String, callback: @escaping ImageCallback)  {
+//        let urlRequest = URLRequest(url: URL(string: url)!)
+//        URLSession.shared.dataTask(with: urlRequest) { data , response, error in
+//            if error != nil {
+//                callback(.failure(.customError("Error during request")))
+//                return
+//            }
+//            
+//            if data == nil {
+//                callback(.failure(.emptyData))
+//                return
+//            }
+//            
+////            let response = try? JSONDecoder().decode(Characters.self, from: data!)
+////            if response == nil {
+////                callback(.failure(.wrongJson))
+////            }
+////
+////            let mapped = response!.results.map { character in
+////                CartoonCharacter(
+////                    id: character.id,
+////                    name: character.name,
+////                    status: character.status.rawValue,
+////                    gender: character.gender.rawValue,
+////                    url: character.url)
+////            }
+//            callback(.success(data))
+//        }.resume()
+//    }
     
     func getLocations(callback: @escaping LocationsCallback)  {
         let urlRequest = URLRequest(url: URL(string: "\(baseUrl)/location")!)

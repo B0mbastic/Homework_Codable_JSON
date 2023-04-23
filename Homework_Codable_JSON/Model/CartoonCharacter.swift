@@ -12,4 +12,9 @@ struct CartoonCharacter {
     let name: String
     let status: String
     let gender: String
+    let url: String
 }
+
+//struct characterImageData {
+//    let id: Int
+//}//Data = Data()
