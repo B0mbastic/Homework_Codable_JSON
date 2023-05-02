@@ -9,7 +9,10 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class StartUpViewController: UIViewController {
+    
+    var coordinator: Coordinator?
+    var startUpCoordinator: StartUpCoordinator? { coordinator as? StartUpCoordinator }
     
     private lazy var mainLabel: UILabel = {
         let label = UILabel()
