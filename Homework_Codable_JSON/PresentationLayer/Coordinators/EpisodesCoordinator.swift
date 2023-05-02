@@ -20,7 +20,8 @@ class EpisodesCoordinator: Coordinator {
 
     func start() {
         let controller = EpisodesViewController()
-        controller.coordinator = self
+        // Эту строку закомментировал, так как задание было переделать под архитектуру Cleanswift только один контроллер )
+        //controller.coordinator = self
         navController.pushViewController(controller, animated: true)
     }
 }

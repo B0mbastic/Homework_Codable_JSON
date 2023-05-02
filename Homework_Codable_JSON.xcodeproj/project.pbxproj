@@ -33,6 +33,11 @@
 		D2E99AFF2A0183BC00776B31 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99AFE2A0183BC00776B31 /* CharactersCoordinator.swift */; };
 		D2E99B012A01840200776B31 /* LocationsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99B002A01840200776B31 /* LocationsCoordinator.swift */; };
 		D2E99B032A01843400776B31 /* EpisodesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99B022A01843400776B31 /* EpisodesCoordinator.swift */; };
+		D2E99B052A0184D500776B31 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99B042A0184D500776B31 /* Configurator.swift */; };
+		D2E99B072A01851200776B31 /* StartUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99B062A01851200776B31 /* StartUpPresenter.swift */; };
+		D2E99B092A01854800776B31 /* StartUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99B082A01854800776B31 /* StartUpInteractor.swift */; };
+		D2E99B0C2A0185C900776B31 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99B0B2A0185C900776B31 /* AppCoordinator.swift */; };
+		D2E99B0F2A01868F00776B31 /* LocalDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99B0E2A01868F00776B31 /* LocalDataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +68,11 @@
 		D2E99AFE2A0183BC00776B31 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
 		D2E99B002A01840200776B31 /* LocationsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCoordinator.swift; sourceTree = "<group>"; };
 		D2E99B022A01843400776B31 /* EpisodesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesCoordinator.swift; sourceTree = "<group>"; };
+		D2E99B042A0184D500776B31 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		D2E99B062A01851200776B31 /* StartUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpPresenter.swift; sourceTree = "<group>"; };
+		D2E99B082A01854800776B31 /* StartUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpInteractor.swift; sourceTree = "<group>"; };
+		D2E99B0B2A0185C900776B31 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D2E99B0E2A01868F00776B31 /* LocalDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +106,9 @@
 		D2ABB9DE29DB260D001CF8F3 /* Homework_Codable_JSON */ = {
 			isa = PBXGroup;
 			children = (
-				D2E99AF92A01829000776B31 /* New Group */,
+				D2E99B0D2A01867900776B31 /* Workers */,
+				D2E99B0A2A0185AB00776B31 /* App */,
+				D2E99AF92A01829000776B31 /* DI */,
 				D2E99AF82A01824800776B31 /* StartUpFeature */,
 				D2B4A50E29DC9A1400A45BB0 /* PresentationLayer */,
 				D2ABB9F829DB27B8001CF8F3 /* Model */,
@@ -153,15 +165,18 @@
 			children = (
 				D2E99AFA2A0182A600776B31 /* Coordinator */,
 				D2ABB9E329DB260D001CF8F3 /* StartUpViewController.swift */,
+				D2E99B062A01851200776B31 /* StartUpPresenter.swift */,
+				D2E99B082A01854800776B31 /* StartUpInteractor.swift */,
 			);
 			path = StartUpFeature;
 			sourceTree = "<group>";
 		};
-		D2E99AF92A01829000776B31 /* New Group */ = {
+		D2E99AF92A01829000776B31 /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				D2E99B042A0184D500776B31 /* Configurator.swift */,
 			);
-			path = "New Group";
+			path = DI;
 			sourceTree = "<group>";
 		};
 		D2E99AFA2A0182A600776B31 /* Coordinator */ = {
@@ -180,6 +195,22 @@
 				D2E99B022A01843400776B31 /* EpisodesCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D2E99B0A2A0185AB00776B31 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D2E99B0B2A0185C900776B31 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D2E99B0D2A01867900776B31 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				D2E99B0E2A01868F00776B31 /* LocalDataStorage.swift */,
+			);
+			path = Workers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +292,12 @@
 				D2A381AB29DD8AAC0055581B /* EpisodesViewController.swift in Sources */,
 				D2ABB9FA29DB27D1001CF8F3 /* CallbackTypes.swift in Sources */,
 				D2ABB9FE29DB283E001CF8F3 /* NetworkError.swift in Sources */,
+				D2E99B0F2A01868F00776B31 /* LocalDataStorage.swift in Sources */,
 				D2ABB9F529DB273B001CF8F3 /* NetworkLayer.swift in Sources */,
 				D2ABBA0429DB4ED3001CF8F3 /* CartoonLocation.swift in Sources */,
 				D2ABBA0029DB28A3001CF8F3 /* NetworkModel.swift in Sources */,
+				D2E99B0C2A0185C900776B31 /* AppCoordinator.swift in Sources */,
+				D2E99B092A01854800776B31 /* StartUpInteractor.swift in Sources */,
 				D2E99AFF2A0183BC00776B31 /* CharactersCoordinator.swift in Sources */,
 				D2E99AF72A01823000776B31 /* Coordinator.swift in Sources */,
 				D2A381AF29DDDE100055581B /* CharacterViewController.swift in Sources */,
@@ -274,11 +308,13 @@
 				D2ABBA0229DB3C7A001CF8F3 /* TableCell.swift in Sources */,
 				D2ABB9E429DB260D001CF8F3 /* StartUpViewController.swift in Sources */,
 				D2ABB9F729DB277B001CF8F3 /* UrlSessionNetworkLayer.swift in Sources */,
+				D2E99B052A0184D500776B31 /* Configurator.swift in Sources */,
 				D2ABB9E029DB260D001CF8F3 /* AppDelegate.swift in Sources */,
 				D2E99B012A01840200776B31 /* LocationsCoordinator.swift in Sources */,
 				D2E99B032A01843400776B31 /* EpisodesCoordinator.swift in Sources */,
 				D2ABB9E229DB260D001CF8F3 /* SceneDelegate.swift in Sources */,
 				D2A381B129DDE6150055581B /* LocationViewController.swift in Sources */,
+				D2E99B072A01851200776B31 /* StartUpPresenter.swift in Sources */,
 				D2A381AD29DD961B0055581B /* EpisodeViewController.swift in Sources */,
 				D2B4A50D29DC99F300A45BB0 /* CharactersViewController.swift in Sources */,
 			);

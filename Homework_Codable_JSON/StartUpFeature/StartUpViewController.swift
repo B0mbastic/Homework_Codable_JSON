@@ -13,6 +13,7 @@ class StartUpViewController: UIViewController {
     
     var coordinator: Coordinator?
     var startUpCoordinator: StartUpCoordinator? { coordinator as? StartUpCoordinator }
+    var interactor: StartUpInteractor?
     
     private lazy var mainLabel: UILabel = {
         let label = UILabel()
