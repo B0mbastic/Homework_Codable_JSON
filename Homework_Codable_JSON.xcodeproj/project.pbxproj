@@ -28,6 +28,7 @@
 		D2ABBA0429DB4ED3001CF8F3 /* CartoonLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ABBA0329DB4ED3001CF8F3 /* CartoonLocation.swift */; };
 		D2ABBA0729DB5305001CF8F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D2ABBA0629DB5305001CF8F3 /* SnapKit */; };
 		D2B4A50D29DC99F300A45BB0 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B4A50C29DC99F300A45BB0 /* CharactersViewController.swift */; };
+		D2E99AF72A01823000776B31 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E99AF62A01823000776B31 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		D2ABBA0129DB3C7A001CF8F3 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		D2ABBA0329DB4ED3001CF8F3 /* CartoonLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonLocation.swift; sourceTree = "<group>"; };
 		D2B4A50C29DC99F300A45BB0 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		D2E99AF62A01823000776B31 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		D2ABB9DE29DB260D001CF8F3 /* Homework_Codable_JSON */ = {
 			isa = PBXGroup;
 			children = (
+				D2E99AF82A01824800776B31 /* Start */,
 				D2B4A50E29DC9A1400A45BB0 /* PresentationLayer */,
 				D2ABB9F829DB27B8001CF8F3 /* Model */,
 				D2ABB9F329DB26FD001CF8F3 /* NetworkLayer */,
@@ -116,6 +119,7 @@
 				D2ABB9FF29DB28A3001CF8F3 /* NetworkModel.swift */,
 				D2ABBA0329DB4ED3001CF8F3 /* CartoonLocation.swift */,
 				D2A381A829DD89C50055581B /* CartoonEpisode.swift */,
+				D2E99AF62A01823000776B31 /* Coordinator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +137,13 @@
 				D2A381B029DDE6150055581B /* LocationViewController.swift */,
 			);
 			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		D2E99AF82A01824800776B31 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				D2ABB9F529DB273B001CF8F3 /* NetworkLayer.swift in Sources */,
 				D2ABBA0429DB4ED3001CF8F3 /* CartoonLocation.swift in Sources */,
 				D2ABBA0029DB28A3001CF8F3 /* NetworkModel.swift in Sources */,
+				D2E99AF72A01823000776B31 /* Coordinator.swift in Sources */,
 				D2A381AF29DDDE100055581B /* CharacterViewController.swift in Sources */,
 				D2ABB9FC29DB2805001CF8F3 /* CartoonCharacter.swift in Sources */,
 				D2A381A929DD89C50055581B /* CartoonEpisode.swift in Sources */,
