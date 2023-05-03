@@ -13,7 +13,6 @@ struct LocalDataStorage {
     }
 
     func setSection(sectionId: Int) {
-        print("writing section: \(sectionId)")
         UserDefaults.standard.set(sectionId, forKey: "storedSection")
     }
 }

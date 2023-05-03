@@ -24,7 +24,6 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
-        //navController.delegate = self
         uiWindow?.rootViewController = navController
 
         let startUpCoordinator = StartUpCoordinator(parent: self, navController: navController)
