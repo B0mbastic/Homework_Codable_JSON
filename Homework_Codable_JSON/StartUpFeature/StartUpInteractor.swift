@@ -16,8 +16,14 @@ class StartUpInteractor {
         self.presenter = presenter
     }
 
-    func checkLogin() {
-        let isLogedIn = storage.checkLogin()
-        presenter.onLoginCheckResults(results: isLogedIn)
+    func checkStoredSection() {
+        let storedSectionId = storage.checkSection()
+        print(storedSectionId)
+        presenter.sectionCheckResults(results: storedSectionId)
+    }
+    
+    func setStoredSection(sectionId: Int) {
+        storage.setSection(sectionId: sectionId)
+        presenter.sectionCheckResults(results: sectionId)
     }
 }

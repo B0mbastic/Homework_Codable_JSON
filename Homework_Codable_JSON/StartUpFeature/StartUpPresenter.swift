@@ -14,7 +14,7 @@ class StartUpPresenter {
         self.view = view
     }
 
-    func onLoginCheckResults(results: Bool) {
-        //view.onLoginResult(isLoggedIn: results)
+    func sectionCheckResults(results: Int) {
+        view.setCurrentSection(sectionId: results)
     }
 }

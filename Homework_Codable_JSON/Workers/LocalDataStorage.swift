@@ -8,11 +8,12 @@
 import Foundation
 
 struct LocalDataStorage {
-    func checkLogin() -> Bool {
-        return UserDefaults.standard.bool(forKey: "login")
+    func checkSection() -> Int {
+        return UserDefaults.standard.integer(forKey: "storedSection")
     }
 
-    func login() {
-        UserDefaults.standard.set(true, forKey: "login")
+    func setSection(sectionId: Int) {
+        print("writing section: \(sectionId)")
+        UserDefaults.standard.set(sectionId, forKey: "storedSection")
     }
 }
