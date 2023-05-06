@@ -8,8 +8,11 @@
 
 import UIKit
 import SnapKit
+import Firebase
 
 class StartUpViewController: UIViewController {
+    
+    let analytics: AnalyticsService = EntireAnalytics()
     
     var coordinator: Coordinator?
     var startUpCoordinator: StartUpCoordinator? { coordinator as? StartUpCoordinator }
@@ -65,7 +68,7 @@ class StartUpViewController: UIViewController {
         button.tag = 0
         button.setTitle("Reset App", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(showSection), for: .touchUpInside)
+        button.addTarget(self, action: #selector(resetSection), for: .touchUpInside)
         return button
     }()
     
@@ -136,6 +139,16 @@ class StartUpViewController: UIViewController {
     }
     
     @objc func showSection(sender: UIButton!){
+        Crashlytics.crashlytics().log("Load Section!")
+        analytics.logEvent(name: "load_section_button", parameters: [
+            loadSectionButtonEventName : "tapped"
+        ])
+        let buttonTag: Int = sender.tag
+        interactor?.setStoredSection(sectionId: buttonTag)
+    }
+    @objc func resetSection(sender: UIButton!){
+        Crashlytics.crashlytics().log("Reset Section!")
+        fatalError("Test crash!")
         let buttonTag: Int = sender.tag
         interactor?.setStoredSection(sectionId: buttonTag)
     }

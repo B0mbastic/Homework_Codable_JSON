@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -25,6 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let navController = UINavigationController(rootViewController: controller)
 //        window?.rootViewController = navController
 //        window?.makeKeyAndVisible()
+        FirebaseApp.configure()
         
         guard let myScene = (scene as? UIWindowScene) else { return }
         appCoordinator.initScene(scene: myScene)

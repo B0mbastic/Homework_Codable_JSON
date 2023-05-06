@@ -7,6 +7,7 @@
 //
 import UIKit
 import SnapKit
+import Firebase
 
 class CharactersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -62,6 +63,8 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Crashlytics.crashlytics().log("Load Section!")
+        fatalError("Error on purpose")
         let characterController = CharacterViewController()
         characterController.characterName = characters[indexPath.row].name
         characterController.characterStatus = characters[indexPath.row].status
